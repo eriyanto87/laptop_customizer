@@ -1,4 +1,5 @@
 import React from 'react'; 
+import Total from './Total';
 
 export default function Summary({selected}) {
     const USCurrencyFormat = new Intl.NumberFormat('en-US', {
@@ -21,21 +22,13 @@ export default function Summary({selected}) {
         );
       });
   
-      const total = Object.keys(selected).reduce(
-        (acc, curr) => acc + selected[curr].cost,
-        0
-      );
+
 
       return (
       <section className='main__summary'>
       <h2>Your cart</h2>
       {summary}
-      <div className='summary__total'>
-        <div className='summary__total__label'>Total</div>
-        <div className='summary__total__value'>
-          {USCurrencyFormat.format(total)}
-        </div>
-      </div>
+        <Total selected={selected}/>
     </section>
       )
 }

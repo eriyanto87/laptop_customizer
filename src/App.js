@@ -1,14 +1,8 @@
 import React, { Component } from 'react';
-import slugify from 'slugify';
 import './App.css';
 import Header from './Components/Header/Header.js';
 import Summary from './Components/Summary/Summary.js';
 import Form from './Components/Forms/Forms.js';
-
-const USCurrencyFormat = new Intl.NumberFormat('en-US', {
-  style: 'currency',
-  currency: 'USD'
-});
 
 class App extends Component {
   state = {
