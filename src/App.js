@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import slugify from 'slugify';
+import './App.css';
 
 const USCurrencyFormat = new Intl.NumberFormat('en-US', {
   style: 'currency',
