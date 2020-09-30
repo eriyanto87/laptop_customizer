@@ -1,13 +1,13 @@
 import React from 'react';
 import slugify from 'slugify';
 
-export default function Form({selected, featurea, updateFeature}) {
+export default function Form({selected, features, updateFeature}) {
     const USCurrencyFormat = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'USD'
       });
     
-        const features = Object.keys(this.props.features).map((feature, idx) => {
+        return Object.keys(this.props.features).map((feature, idx) => {
         const featureHash = feature + '-' + idx;
         const options = this.props.features[feature].map((item) => {
         const itemHash = slugify(JSON.stringify(item));
